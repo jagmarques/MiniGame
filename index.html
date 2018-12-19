@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Escape DEI</title>
+
+    <script src="phaser.js"></script>
+    <!-- falta o jogar-->
+    <script src="GlobalVariables.js"></script>
+
+    <script src="Preloader.js"></script>
+    <script src="menus/ModoHistoriaMenu.js"></script>
+    <script src="menus/MiniJogosMenu.js"></script>
+    <script src="menus/CreditosMenu.js"></script>
+    <script src="menus/AjudaMenu.js"></script>
+
+    <script src="minijogos/AulaAMI.js"></script>
+    <script src="minijogos/AcertaoCodigo.js"></script>
+
+    <script src="levels/Salas.js"></script>
+    <script src="levels/Sala.js"></script>
+    <script src="levels/Corredor.js"></script>
+    <script src="levels/Jardim.js"></script>
+    <script src="levels/Bar.js"></script>
+    <script src="levels/Secretaria.js"></script>
+
+    <script src="menus/MainMenu.js"></script>
+
+
+</head>
+
+<body>
+    <script>
+        var config = {
+            type: Phaser.AUTO,
+            width: 1250,
+            height: 900,
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 0 },
+                    debug: false
+                }
+            },
+            audio: {
+              disableWebAudio: true
+            },
+            scene: [Preloader,MainMenu, ModoHistoriaMenu, MiniJogosMenu, CreditosMenu, AjudaMenu, Corredor, Secretaria, AcertaoCodigo, AulaAMI, Salas, Sala, Jardim, Bar] //Sair e jogar faltam
+        };
+        var game = new Phaser.Game(config);
+    </script>
+</body>
+</html>
