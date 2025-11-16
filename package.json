@@ -1,0 +1,13 @@
+{
+  "name": "escape-dei",
+  "version": "1.0.0",
+  "description": "Phaser 3 mini-game prototype cleaned up for maintainability.",
+  "scripts": {
+    "lint": "eslint src --ext .js",
+    "format": "prettier --check \"**/*.{js,json,md}\""
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "prettier": "^3.2.5"
+  }
+}
